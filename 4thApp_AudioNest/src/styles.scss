@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+html{
+    height: 100%;
+} 
+body {
+    height: 100%;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: rgba(0, 0, 0, .9);
+    background-image: url(../bg2.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    /* backdrop-filter: blur(1px); */
+    background-blend-mode: darken;
+    margin-bottom: 8%;
+}
+app-root {
+    display: block;
+    height: 100%;
+  }

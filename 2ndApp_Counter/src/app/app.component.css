@@ -1,0 +1,25 @@
+.bg{
+    width: 100%;
+    height: max-content;
+    background-image: url('bgimg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background: cover;
+}
+
+.fs{
+    font-size: 2em;
+}
+
+p{
+    font-size: 4em;
+    font-weight: 500;
+}
+
+body > div{
+    height: 450px;
+}
+
+button{
+    border: 2px black solid;
+}

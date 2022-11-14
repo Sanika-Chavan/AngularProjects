@@ -1,0 +1,49 @@
+<ng-container *ngIf="songs.length==0">
+    <div class="container">
+        <div class="card"></div>
+        <div class="center">
+            <i class="bi bi-music-note-beamed" style="font-size: 3em;"></i>
+            <h4>No Saved Songs </h4>
+            <h4>Add Music to your Library</h4>
+            <h6>Search millions of songs and collect your favourites here</h6>
+            <button routerLink="/" class="btn btn-warning" style="font-weight: 700;">Browse Music</button>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="songs.length!=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="card-product">
+                <table class="table table-responsive mb-0">
+                    <thead>
+                        <tr>
+                            <th>Sl.No.</th>
+                            <th>Song Name</th>
+                            <th>Song Thumbnail </th>
+                            <th>Artist</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of songs; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.name}}</td>
+                            <td><img style="width:120px; border: white 1px solid;" src="{{item.imgSrc}}" alt=""></td>
+                            <td style="width: 25%;">{{item.artist}}</td>
+                            <td>
+                                <button class="btn btn-danger" (click)="removeSaved(item)"><i
+                                        class="bi bi-trash-fill"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"></td>
+                            <td><button routerLink="/" class="btn btn-warning">Search Music</button></td>
+                            <td><button class="btn btn-danger" (click)="removeAllSongs()">Clear Saved</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
